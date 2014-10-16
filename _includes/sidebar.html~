@@ -1,0 +1,21 @@
+<div class="row-fluid">
+  <div class="span12">
+    <div class="box">
+      <h1>Home Page</h1>    
+      <p>Content will go here</p>
+      <h3>About This Website</h3>
+      
+      <p>
+	Moving from Paris to San Francisco a few month ago was a huge change in my life on a lot of levels. One of them being the way 
+      </p>
+      
+      <h3>Recent posts</h3>
+      <ul>
+	{% for post in site.posts limit: 5 %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+      </ul>
+      
+    </div>
+  </div>  
+</div>
