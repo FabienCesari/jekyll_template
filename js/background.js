@@ -5,9 +5,9 @@ var main_color = 200;
 
 function sketchProc(processing) 
 {	
-    var nbr_of_circles = Math.ceil(processing.random(1,50));
-    var min_size = 10;
-    var max_size = 50;	
+    var nbr_of_circles = Math.ceil(processing.random(1,200));
+    var min_size = 50;
+    var max_size = 2000;	
     var point_size = 1;
     var ds = 4;
     var lockedCircle;
@@ -15,6 +15,7 @@ function sketchProc(processing)
     var lockedOffsetY;
     var dragging = 0;	
     var circles_arr  = new Array(nbr_of_circles);	
+
     for(var i = 0; i< nbr_of_circles; i++)
     {
 	circles_arr[i] = new Array(5);
@@ -25,6 +26,7 @@ function sketchProc(processing)
     {
 	processing.frameRate(25);
 	processing.size(win_width,win_height);	
+
 	for(var ind = 0; ind < nbr_of_circles; ind++)
 	{ 
 	    circles_arr[ind][0] = processing.random(win_width);
